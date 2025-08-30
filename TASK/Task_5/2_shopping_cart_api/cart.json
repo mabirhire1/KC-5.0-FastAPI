@@ -1,0 +1,12 @@
+{
+    "1": {
+        "name": "Turkey",
+        "price": 1200.5,
+        "qty": 15
+    },
+    "2": {
+        "name": "Butter",
+        "price": 500.99,
+        "qty": 1
+    }
+}
