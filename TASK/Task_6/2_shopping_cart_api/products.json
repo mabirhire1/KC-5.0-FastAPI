@@ -1,0 +1,10 @@
+{
+    "1": {
+        "name": "coconut",
+        "price": 3500.0
+    },
+    "2": {
+        "name": "banana",
+        "price": 3100.0
+    }
+}

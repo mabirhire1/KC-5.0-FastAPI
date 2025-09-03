@@ -1,0 +1,10 @@
+{
+    "ella": {
+        "password": "b19df80bb1142ae243cb61f1abf01c03097ed3897b7e36cca14c07232fb57cc2",
+        "role": "customer"
+    },
+    "mark": {
+        "password": "43d9423892ab14c9da8388f7036067fa0a15b5663e563f22d3383cfc933c1690",
+        "role": "admin"
+    }
+}
