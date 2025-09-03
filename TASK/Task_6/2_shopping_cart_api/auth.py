@@ -1,6 +1,3 @@
-# auth.py
-# Simple authentication system for our mini shop
-
 from fastapi import Depends, HTTPException
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 import json, os, hashlib
