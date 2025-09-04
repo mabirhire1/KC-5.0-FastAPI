@@ -8,7 +8,7 @@ class RequestCounterMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request, call_next):
         self.counter += 1
-        print(f"👉 Total requests so far: {self.counter}")  # Beginner-friendly logging
+        print(f"Total requests so far: {self.counter}")  
         response = await call_next(request)
-        response.headers["X-Total-Requests"] = str(self.counter)  # Send back in header
+        response.headers["X-Total-Requests"] = str(self.counter) 
         return response
