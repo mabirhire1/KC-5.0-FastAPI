@@ -31,3 +31,16 @@
 127.0.0.1 GET /docs 200 0ms
 127.0.0.1 GET /openapi.json 200 7ms
 127.0.0.1 POST /students/ 201 308ms
+127.0.0.1 GET /docs 200 0ms
+127.0.0.1 GET /openapi.json 200 21ms
+127.0.0.1 GET /docs 200 0ms
+127.0.0.1 GET /openapi.json 200 0ms
+127.0.0.1 GET /docs 200 0ms
+127.0.0.1 GET /openapi.json 200 0ms
+127.0.0.1 GET /docs 200 0ms
+127.0.0.1 GET /openapi.json 200 0ms
+127.0.0.1 GET /docs 200 0ms
+127.0.0.1 GET /openapi.json 200 0ms
+127.0.0.1 GET / 404 0ms
+127.0.0.1 GET /docs 200 0ms
+127.0.0.1 GET /openapi.json 200 0ms
