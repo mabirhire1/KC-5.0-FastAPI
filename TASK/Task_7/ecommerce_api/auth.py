@@ -3,7 +3,7 @@ from typing import Optional
 from jose import jwt, JWTError
 from passlib.context import CryptContext
 from fastapi import HTTPException, Depends
-from fastapi.security import OAuth2PasswordBearer
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials 
 
 # Secret used for signing tokens
 SECRET_KEY = "mysecret"
@@ -13,8 +13,8 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60
 # Password hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-# Token extraction (FastAPI built-in helper)
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/users/token")
+# Bearer auth
+bearer_scheme = HTTPBearer()
 
 def hash_password(password: str):
     return pwd_context.hash(password)
@@ -30,7 +30,8 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 # Get current user from token
-def get_current_user(token: str = Depends(oauth2_scheme)):
+def get_current_user(credentials: HTTPAuthorizationCredentials  = Depends(bearer_scheme)):
+    token = credentials.credentials  
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         username: str = payload.get("sub")

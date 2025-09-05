@@ -31,11 +31,11 @@ ecommerce_api/
 ## App Setup
 ```bash
 git clone <repo-url>
-cd ecommerce_api
+cd Task_7
 pip install -r requirements.txt
 ```
 
 ## Run app
 ```bash
-uvicorn main:app --reload
+uvicorn ecommerce_api.main:app --reload
 ```

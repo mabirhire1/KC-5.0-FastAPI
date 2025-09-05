@@ -1,5 +1,16 @@
 from typing import Optional
 from sqlmodel import SQLModel, Field
+from pydantic import BaseModel
+
+# User Login
+class UserLogin(BaseModel):
+    username: str
+    password: str
+
+# User Token
+class Token(BaseModel):
+    access_token: str
+    token_type: str
 
 # Product table
 class Product(SQLModel, table=True):
